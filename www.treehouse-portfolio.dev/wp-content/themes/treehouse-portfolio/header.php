@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title><?php wp_title(); ?></title>
+		<title><?php wp_title( '|', true, right ); bloginfo( 'name' ) ?></title>
 
 		<?php wp_head(); ?>
 
@@ -11,10 +11,10 @@
 
 	<body <?php body_class(); ?>>
 		<header class="row no-max pad main">
-	<h1><a class='current' href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+	<h1><a class='current' href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo('name'); ?></a></h1>
 	<a href="" class="nav-toggle"><span></span>Menu</a>
 	<nav>
-		<h1 class="open"><a class='current' href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+		<h1 class="open"><a class='current' href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo('name'); ?></a></h1>
 		
 		<?php
 

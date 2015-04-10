@@ -25,7 +25,7 @@
 				<p>
 
 					<?php previous_post_link(); ?> -
-					<a href="<?php bloginfo('url') ?>/portfolio">Back</a> -
+					<a href="<?php echo esc_url( home_url() ); ?>/portfolio">Back</a> -
 					<?php next_post_link(); ?>
 
 				</p>
